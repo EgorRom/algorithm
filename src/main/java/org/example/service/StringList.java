@@ -13,5 +13,7 @@ public interface StringList {
     boolean equals(StringList otherList);
     int size();
     boolean isEmpty();
+
+    void clear();
     String[] toArray();
 }
