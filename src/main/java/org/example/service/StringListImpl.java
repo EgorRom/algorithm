@@ -1,6 +1,6 @@
 package org.example.service;
 
-public class StringListImpl implements StringList{
+public class StringListImpl implements StringList {
     @Override
     public String add(String item) {
         return null;
