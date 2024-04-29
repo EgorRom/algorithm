@@ -16,7 +16,7 @@ class StringListImplTest {
 
     @BeforeEach
     void setUp() {
-        stringListTest = new StringListImpl(10);
+        stringListTest = new IntegerListImpl(10);
         stringListTest.add(ZERO);
         stringListTest.add(ONE);
         stringListTest.add(TWO);
@@ -90,7 +90,7 @@ class StringListImplTest {
 
     @Test
     void lastIndexOf() {
-        StringListImpl stringList = new StringListImpl(5);
+        IntegerListImpl stringList = new IntegerListImpl(5);
         String onlyThis = "only this";
         stringList.add(onlyThis);
         stringList.add(onlyThis);
@@ -110,7 +110,7 @@ class StringListImplTest {
 
     @Test
     void testEquals() {
-        StringListImpl stringList = new StringListImpl(10);
+        IntegerListImpl stringList = new IntegerListImpl(10);
         stringList.add(ZERO);
         stringList.add(ONE);
         stringList.add(TWO);
@@ -124,7 +124,7 @@ class StringListImplTest {
 
     @Test
     void size() {
-        StringListImpl stringList = new StringListImpl();
+        IntegerListImpl stringList = new IntegerListImpl();
         assertEquals(0, stringList.size());
         stringList.add(ONE);
         assertEquals(1, stringList.size());
@@ -138,7 +138,7 @@ class StringListImplTest {
 
     @Test
     void isEmpty() {
-        StringListImpl stringList = new StringListImpl(5);
+        IntegerListImpl stringList = new IntegerListImpl(5);
         assertTrue(stringList.isEmpty());
         stringList.add(ONE);
         assertFalse(stringList.isEmpty());
@@ -155,7 +155,7 @@ class StringListImplTest {
 
     @Test
     void toArray() {
-        StringListImpl stringList = new StringListImpl(3);
+        IntegerListImpl stringList = new IntegerListImpl(3);
         String[] actual = {ONE, TWO, THREE};
         for (String s : actual) {
             stringList.add(s);

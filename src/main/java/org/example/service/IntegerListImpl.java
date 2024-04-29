@@ -5,19 +5,19 @@ import org.example.excrption.IncorrectDataException;
 
 import java.util.Arrays;
 
-public class StringListImpl implements StringList {
+public class IntegerListImpl implements StringList {
     private String[] data;
     private int size;
     private int currentLength;
     private static final int DEFAULT_SIZE = 5;
 
-    public StringListImpl() {
+    public IntegerListImpl() {
         data = new String[DEFAULT_SIZE];
         size = 0;
         this.currentLength = DEFAULT_SIZE;
     }
 
-    public StringListImpl(int startLength) {
+    public IntegerListImpl(int startLength) {
         data = new String[startLength];
         size = 0;
         this.currentLength = startLength;
@@ -155,6 +155,13 @@ public class StringListImpl implements StringList {
 
     public String toString() {
         return Arrays.toString(data);
+    }
+
+    private void grow() {
+        if (size == currentLength) {
+            currentLength = currentLength + currentLength / 2;
+            data = Arrays.copyOf(data, currentLength);
+        }
     }
 
 }
